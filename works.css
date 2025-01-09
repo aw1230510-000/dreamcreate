@@ -1,0 +1,111 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'shippori'; 
+    src: url('../main/font/Shippori_Mincho_B1/ShipporiMinchoB1-Regular.ttf') format('truetype');
+    }
+ 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #eabbcc;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px; /* コンテナの幅 */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff; /* コンテナの背景色 */
+    border-radius: 12px; /* 角を丸める */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+/* works */
+
+#works{
+    margin-top: 3vw;
+    text-align: center;
+}
+
+/* img */
+#worksbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 3vw;
+    a{
+        width: 30%;
+    }
+    img{
+        width: 70%;
+        margin: 10px 0 10px 0;
+        border: 2px solid #000;
+        border-radius: 10px;
+        padding: 10px;
+        display: inline-block;
+        transition: transform .5s; /* アニメーション速度 */  
+    }
+    img:hover{
+        transform: scale(1.2); /* 傾ける */
+    }      
+}
+
+/* btn */
+.btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn a{
+    display: inline-block;
+    background-color: #eabbcc;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 40px;
+    font-size: 20px;
+    border-radius: 20px; /*丸角*/
+}
+
+@media screen and (max-width:767px) {
+    #worksbox{
+        a{
+            width: 50%;
+        }
+        img{
+            width: 70%;
+        }    
+          .anima:hover{
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+              animation-duration: 1.0s;
+            }
+            .keyframe{
+              animation-name: poyopoyo;
+            }
+            @keyframes poyopoyo {
+              0%, 40%{
+                transform: scale(1.0);
+              }
+              70% {
+                transform: scale(0.9);
+              }
+            }
+      }         
+}
+
+/* ふわっと表示 */
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

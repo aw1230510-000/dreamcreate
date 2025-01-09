@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+body {
+    background-color: #eabbcc; /* 明るいピンク系の背景 */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #d5006d; /* ピンクの見出し */
+    font-size: 28px; /* 見出しのサイズを大きく */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #d5006d; /* セクションタイトルの色 */
+    font-size: 24px; /* セクションタイトルのサイズ */
+    margin-top: 30px; /* セクション間のスペース */
+}
+
+p {
+    color: #333; /* 段落の文字色 */
+    line-height: 1.6; /* 行間の調整 */
+    margin-bottom: 15px; /* 段落間のスペース */
+}
+
+.container {
+    max-width: 800px; /* コンテナの幅 */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff; /* コンテナの背景色 */
+    border-radius: 12px; /* 角を丸める */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px; /* フッターのスペース */
+    color: #666; /* フッターの文字色 */
+}
+
+a{
+    color: #d5006d;
+}
+/* メディアクエリ（レスポンシブデザイン） */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px; /* スマホ用の見出しサイズ */
+    }
+
+    h2 {
+        font-size: 20px; /* スマホ用のセクションタイトルサイズ */
+    }
+
+    p {
+        font-size: 14px; /* スマホ用の段落サイズ */
+    }
+}

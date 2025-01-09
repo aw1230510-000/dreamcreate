@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../main/img/fav.svg">
+    <link rel="stylesheet" href="order.css">
+    <title>DreamCreate-order</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="img">
+            <img src="../main/img/form.png" alt="form">
+        </div>
+        <div class="text_info">
+            <form id="DreamCreate_form">
+                <!-- 名前 -->
+                <div class="form-group">
+                    <p class="label"><label for="name">Name</label></p>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- フリガナ -->
+                <div class="form-group">
+                    <p class="label"><label for="furigana">Furigana</label></p>
+                    <input type="text" id="furigana" name="furigana" required>
+                </div>
+                
+                <!-- メール -->
+                <div class="form-group">
+                    <p class="label"><label for="mail">Mail</label></p>
+                    <input type="mail" id="mail" name="mail" required>
+                </div>
+                
+                <!-- お問い合わせ内容 -->
+                <div class="form-group">
+                    <p class="label"><label for="details">Reservation details</label></p>
+                    <textarea name="details" id="details" required></textarea>
+                </div>
+        
+                <!-- selectボックス -->
+                <div class="form-group">
+                    <p class="label"><label>Contact</label></p>
+                    <select name="" id="select-options">
+                        <option value="Production">Production</option>
+                        <option value="Web marketing">Web marketing</option>
+                    </select>
+                </div>
+
+                <p id="kakunin">ご利用の前に以下をご確認ください。</p>
+                <div id="checkbox">
+                    <p><input type="checkbox"><a href="../page/TermsofUse.html" class="check">利用規約</a>に同意する</p>
+                    <p><input type="checkbox"><a href="../page/privacy.html" class="check">プライバシーポリシー</a>に同意する</p>
+                </div>
+
+                <p id="mess"></p>
+                <div class="button-group">
+                    <a href="../index.html">cancel</a>
+                    <button type="submit" id="order">order</button>
+                </div>
+
+            </form>
+        </div>  
+        <footer>
+            <p>&copy;2024 Dream Create All Rights Reserved.</p>
+        </footer>   
+    </div> 
+     
+    <script src="order.js">
+        // テストコード
+        localStorage.setItem('testKey', 'testValue');
+        console.log(localStorage.getItem('testKey'));
+    </script>
+</body>
+</html>
